@@ -53,7 +53,8 @@ set t_co=256
 set background=dark
 
 "colorscheme distinguished
-colorscheme molokai
+"colorscheme molokai
+colorscheme solarized
 
 " settings for vim-javascript. I was trying to prevent folding but js files
 " still fold...hopefully we can fix that sometime
