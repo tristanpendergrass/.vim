@@ -49,11 +49,11 @@ syntax enable
 filetype plugin indent on
 
 " color scheme goes here
-"set t_co=256
-"set background=dark
+set t_co=256
+set background=dark
 
 "colorscheme distinguished
-"colorscheme molokai
+colorscheme molokai
 
 " settings for vim-javascript. I was trying to prevent folding but js files
 " still fold...hopefully we can fix that sometime
