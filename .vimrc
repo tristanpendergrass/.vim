@@ -116,10 +116,10 @@ inoremap jk <Esc>
 inoremap JK <Esc>
 
 " for scrolling up and down quickly
-nnoremap J jjjjjjj
-nnoremap K kkkkkkk
-vnoremap J jjjjjjj
-vnoremap K kkkkkkk
+nnoremap J 7j
+nnoremap K 7k
+vnoremap J 7j
+vnoremap K 7k
 
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn=80
