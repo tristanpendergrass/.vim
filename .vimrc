@@ -6,8 +6,8 @@ let mapleader = " "
 
 set splitright
 set guifont=Inconsolata:h16
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set showcmd
 set incsearch
