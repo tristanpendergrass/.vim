@@ -37,3 +37,6 @@
 [submodule "bundle/hasksyn"]
 	path = bundle/hasksyn
 	url = https://github.com/travitch/hasksyn.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
