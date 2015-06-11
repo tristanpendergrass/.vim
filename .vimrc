@@ -32,6 +32,9 @@ nnoremap <CR> o<Esc>k
 " map for opening nerdTree, with two enters required to open it for some reason
 nnoremap <Leader>n :NERDTree<CR><CR>
 
+" change the default width of the NERDTree window
+let g:NERDTreeWinSize = 44 
+
 " for moving between buffers easily
 nnoremap <Leader>h <C-w>h
 nnoremap <Leader>j <C-w>j
@@ -130,3 +133,6 @@ nnoremap <Leader>m :MRU<CR>
 " set width of tabs between the two common settings: 2 and 4
 nnoremap <Leader>2 :set shiftwidth=2<CR>
 nnoremap <Leader>4 :set shiftwidth=4<CR>
+
+" align the properties of a json object when cursor is inside that object
+nnoremap <Leader>t Vi{:Tab/:\zs<CR>
