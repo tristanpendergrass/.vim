@@ -3,6 +3,10 @@ snippet c
 snippet con
 	console.log('${1:foo} is', $1);
 snippet it
-	it('${1}', (${2}) => {
-	  ${0}
+	it('${0}', () => {
 	});
+snippet des
+	describe('${0}', () => {
+	});
+snippet >
+	() => {${0}
