@@ -16,9 +16,6 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "bundle/javascript-libraries/syntax.vim"]
 	path = bundle/javascript-libraries/syntax.vim
 	url = https://github.com/othree/javascript-libraries-syntax.vim.git
@@ -31,9 +28,6 @@
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-[submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
 [submodule "bundle/hasksyn"]
 	path = bundle/hasksyn
 	url = https://github.com/travitch/hasksyn.git
