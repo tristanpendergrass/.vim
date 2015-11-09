@@ -1,7 +1,9 @@
 snippet c
 	console.log(${1});
+
 snippet con
 	console.log('${1:} is', $1);
+
 snippet it
 	it('${0}', () => {
 	});
@@ -12,3 +14,8 @@ snippet >
 	(${2}) => {
 	  ${0}
 	}${1}
+
+snippet service
+	import angular from 'angular';
+
+  const fooModule = angular.module('foo', []);

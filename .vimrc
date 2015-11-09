@@ -6,7 +6,7 @@ set nocompatible
 let mapleader = " "
 
 set splitright
-set guifont=Inconsolata:h12
+set guifont=Inconsolata:h14
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -67,6 +67,9 @@ set background=dark
 "colorscheme molokai
 colorscheme solarized
 
+"highlight ColorColumn ctermbg=235 guibg=#EAEAC5
+highlight ColorColumn ctermbg=235 guibg=#1A334C
+let &colorcolumn=80
 
 " settings for vim-javascript. I was trying to prevent folding but js files
 " still fold...hopefully we can fix that sometime
@@ -134,9 +137,6 @@ nnoremap K 7k
 vnoremap J 7j
 vnoremap K 7k
 
-highlight ColorColumn ctermbg=235 guibg=#1A334C
-let &colorcolumn=80
-
 " set width of tabs between the two common settings: 2 and 4
 nnoremap <Leader>2 :set shiftwidth=2<CR>
 nnoremap <Leader>4 :set shiftwidth=4<CR>
@@ -146,7 +146,7 @@ nnoremap <Leader>t Vi{:Tab/:\zs<CR>
 
 " type :join to bring the line below the cursor up to the end of the current
 " line
-:cnoremap join <Esc>J
+:cnoremap join <Esc>Jx
 
 " NERDTress File highlighting
 " this can't go higher in the vimrc or something else overwrites its
