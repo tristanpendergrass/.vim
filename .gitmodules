@@ -46,3 +46,15 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = http://github.com/SirVer/ultisnips
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/indentLine"]
+	path = bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "bundle/guicolorscheme.vim"]
+	path = bundle/guicolorscheme.vim
+	url = http://github.com/vim-scripts/guicolorscheme.vim
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git

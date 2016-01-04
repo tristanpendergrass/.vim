@@ -36,6 +36,13 @@ nnoremap <Leader>n :NERDTree<CR><CR>
 " change the default width of the NERDTree window
 let g:NERDTreeWinSize = 44 
 
+" make vim-markdown not fold lines
+let g:vim_markdown_folding_disabled=1
+
+" change indenting character
+" I like it off for now
+"let g:indentLine_char = '︙'
+
 "NERDTrees File highlighting
 "function! NERDTreeHighlightFile(extension, fg)
  "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
@@ -60,16 +67,15 @@ syntax enable
 filetype plugin indent on
 
 " color scheme goes here
-set t_co=256
+"set t_co=256
 set background=dark
 
 "colorscheme distinguished
-"colorscheme molokai
 colorscheme solarized
 
 "highlight ColorColumn ctermbg=235 guibg=#EAEAC5
-highlight ColorColumn ctermbg=235 guibg=#1A334C
-let &colorcolumn=80
+"highlight ColorColumn ctermbg=235 guibg=#1A334C
+"let &colorcolumn=80
 
 " settings for vim-javascript. I was trying to prevent folding but js files
 " still fold...hopefully we can fix that sometime
@@ -148,36 +154,5 @@ nnoremap <Leader>t Vi{:Tab/:\zs<CR>
 " line
 :cnoremap join <Esc>Jx
 
-" NERDTress File highlighting
-" this can't go higher in the vimrc or something else overwrites its
-" instructions. not sure how far down it has to be, but here works
-function! NERDTreeHighlightFile(extension, fg)
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
- exec 'autocmd filetype nerdtree highlight ' . a:extension . ' guifg=' . a:fg
- "exec 'autocmd filetype nerdtree highlight ' . a:extension . ' guifg=' . a:fg . ' gui=bold'
-endfunction
-let white = '#ffffff'
-let gold = '#ffd700'
-let darkgoldenrod = '#b8860b'
-let green = '#00CC00'
-let brown = '#a5682a'
-let silver = '#b0b0b0'
-let purple = '#9370db'
-let red = '#cc0000'
-call NERDTreeHighlightFile('js', gold)
-call NERDTreeHighlightFile('js.map', gold)
-call NERDTreeHighlightFile('spec.js', darkgoldenrod)
-call NERDTreeHighlightFile('html', green)
-call NERDTreeHighlightFile('json', brown)
-call NERDTreeHighlightFile('yml', brown)
-call NERDTreeHighlightFile('txt', white)
-call NERDTreeHighlightFile('md', white)
-call NERDTreeHighlightFile('css', purple)
-call NERDTreeHighlightFile('css.map', purple)
-call NERDTreeHighlightFile('less', purple)
-call NERDTreeHighlightFile('scss', purple)
-call NERDTreeHighlightFile('sass', purple)
-call NERDTreeHighlightFile('jpg', silver)
-call NERDTreeHighlightFile('png', silver)
-call NERDTreeHighlightFile('svg', silver)
-call NERDTreeHighlightFile('ico', silver)
+let $VIMHOME=expand('<sfile>:p:h')
+source $VIMHOME/.vim/.vimrc_nerdtree_colors

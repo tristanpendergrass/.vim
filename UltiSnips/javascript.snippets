@@ -1,0 +1,57 @@
+##
+## General javascript
+##
+snippet c
+console.log($1);
+endsnippet
+
+snippet con
+console.log('$1 is', $1);
+endsnippet
+
+snippet > "ES6 anonymous function" i
+($2) => {
+  $0
+}$1
+endsnippet
+
+##
+## Angular specific
+##
+snippet directive
+/**
+ * $1 directive.
+ *
+ * Usage:
+ */
+class $1Ctrl {
+  constructor() {
+	}
+}
+
+function $1() {
+  return {
+	  restrict: 'E',
+		template: \`\`,
+		controller: $1Ctrl,
+		controllerAs: '$1Ctrl',
+		bindToController: true,
+		scope: {
+		}
+	};
+}
+
+export default $1;
+endsnippet
+
+snippet service
+/**
+ * $1 service
+ */
+class $1 {
+  constructor() {
+	}
+}
+
+export default $1;
+endsnippet

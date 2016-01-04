@@ -1,0 +1,70 @@
+" NERDTress File highlighting
+" this can't go higher in the vimrc or something else overwrites its
+" instructions. not sure how far down it has to be, but here works
+function! NERDTreeHighlightFile(extension, fg)
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+ exec 'autocmd filetype nerdtree highlight ' . a:extension . ' guifg=' . a:fg
+ "exec 'autocmd filetype nerdtree highlight ' . a:extension . ' guifg=' . a:fg . ' gui=bold'
+endfunction
+
+let green1 = '#c2e79a'
+let green2 = '#92c060'
+let green3 = '#699a33'
+let green4 = '#457313'
+let green5 = '#284d00'
+
+let cyan1 = '#78b494'
+let cyan2 = '#4b966e'
+let cyan3 = '#28748d'
+let cyan4 = '#0f5a32'
+let cyan5 = '#003c1c'
+
+let orange1 = '#ffbdaa'
+let orange2 = '#d4826a'
+let orange3 = '#aa5239'
+let orange4 = '#802d15'
+let orange5 = '#551300'
+
+let mauve1 = '#de94af'
+let mauve2 = '#b95c7f'
+let mauve3 = '#943156'
+let mauve4 = '#6f1235'
+let mauve5 = '#4a001b'
+
+let white = '#ffffff'
+let gold = '#ffd700'
+let darkgoldenrod = '#b8860b'
+let green = '#00CC00'
+let brown = '#a5682a'
+let silver = '#b0b0b0'
+let purple = '#845cd5'
+let red = '#cc0000'
+
+call NERDTreeHighlightFile('js', '#ffa500')
+call NERDTreeHighlightFile('js.map', '#ffa500')
+call NERDTreeHighlightFile('spec.js', '#ffc04d')
+
+call NERDTreeHighlightFile('html', green)
+call NERDTreeHighlightFile('json', brown)
+call NERDTreeHighlightFile('yml', brown)
+call NERDTreeHighlightFile('txt', white)
+call NERDTreeHighlightFile('md', white)
+call NERDTreeHighlightFile('css', purple)
+call NERDTreeHighlightFile('css.map', purple)
+call NERDTreeHighlightFile('less', purple)
+call NERDTreeHighlightFile('scss', purple)
+call NERDTreeHighlightFile('sass', purple)
+call NERDTreeHighlightFile('jpg', silver)
+call NERDTreeHighlightFile('png', silver)
+call NERDTreeHighlightFile('svg', silver)
+call NERDTreeHighlightFile('ico', silver)
+
+" Angular specific colors
+call NERDTreeHighlightFile('controller.js', '#99ccff')
+call NERDTreeHighlightFile('controller.spec.js', '#e6f2ff')
+call NERDTreeHighlightFile('service.js', '#ff3434')
+call NERDTreeHighlightFile('service.spec.js', '#ff8181')
+call NERDTreeHighlightFile('directive.js', '#ffff00')
+call NERDTreeHighlightFile('directive.spec.js', '#ffff9a')
+call NERDTreeHighlightFile('filter.js', '#ac5685')
+call NERDTreeHighlightFile('filter.spec.js', '#ce8aaf')
