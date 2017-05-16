@@ -41,6 +41,7 @@ let purple = '#845cd5'
 let red = '#cc0000'
 
 call NERDTreeHighlightFile('js', '#ffa500')
+call NERDTreeHighlightFile('jsx', '#ffa500')
 call NERDTreeHighlightFile('js.map', '#ffa500')
 call NERDTreeHighlightFile('spec.js', '#ffc04d')
 
@@ -68,3 +69,10 @@ call NERDTreeHighlightFile('directive.js', '#ffff00')
 call NERDTreeHighlightFile('directive.spec.js', '#ffff9a')
 call NERDTreeHighlightFile('filter.js', '#ac5685')
 call NERDTreeHighlightFile('filter.spec.js', '#ce8aaf')
+call NERDTreeHighlightFile('model.js', '#aa56ff')
+call NERDTreeHighlightFile('model.spec.js', '#d9a0ff')
+call NERDTreeHighlightFile('component.js', '#ffff00')
+call NERDTreeHighlightFile('component.spec.js', '#ffff9a')
+
+" Elm colors
+call NERDTreeHighlightFile('elm', cyan2)

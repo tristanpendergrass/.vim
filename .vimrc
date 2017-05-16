@@ -16,6 +16,9 @@ set noeol
 set fileformats+=dos
 set noro
 
+" tab width should be different for some file types
+autocmd FileType elm setlocal shiftwidth=4 softtabstop=4 expandtab
+
 " these make it so that our text search will only be case sensitive if it
 " includes a capital letter. The ignore case is a prereq for smartcase
 set ignorecase
@@ -38,6 +41,12 @@ let g:NERDTreeWinSize = 44
 
 " make vim-markdown not fold lines
 let g:vim_markdown_folding_disabled=1
+
+" enable autoformating of rust files on save
+let g:rustfmt_autosave = 1
+
+" enable jsx syntax highlighting in .js files as well as .jsx
+let g:jsx_ext_required = 0
 
 " change indenting character
 " I like it off for now
@@ -152,7 +161,11 @@ nnoremap <Leader>t Vi{:Tab/:\zs<CR>
 
 " type :join to bring the line below the cursor up to the end of the current
 " line
-:cnoremap join <Esc>Jx
+nnoremap \ J
 
+" source the vim nerdtree colors file
 let $VIMHOME=expand('<sfile>:p:h')
 source $VIMHOME/.vim/.vimrc_nerdtree_colors
+
+" bind backspace to open previously open buffer
+nnoremap <BS> :new<CR>:bp<CR>

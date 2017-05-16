@@ -64,3 +64,6 @@
 [submodule "bundle/rust.vim"]
 	path = bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = http://github.com/mxw/vim-jsx

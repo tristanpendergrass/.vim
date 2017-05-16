@@ -67,3 +67,8 @@ class $1 {
 export default $1;
 endsnippet
 
+snippet watch
+$1.$watch(() => $1.$2, () => {
+  console.log('$1.$2 is', $1.$2);
+});
+endsnippet
