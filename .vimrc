@@ -83,8 +83,8 @@ set background=dark
 colorscheme solarized
 
 "highlight ColorColumn ctermbg=235 guibg=#EAEAC5
-"highlight ColorColumn ctermbg=235 guibg=#1A334C
-"let &colorcolumn=80
+highlight ColorColumn ctermbg=235 guibg=#1A334C
+let &colorcolumn=100
 
 " settings for vim-javascript. I was trying to prevent folding but js files
 " still fold...hopefully we can fix that sometime
@@ -159,13 +159,10 @@ nnoremap <Leader>4 :set shiftwidth=4<CR>
 " align the properties of a json object when cursor is inside that object
 nnoremap <Leader>t Vi{:Tab/:\zs<CR>
 
-" type :join to bring the line below the cursor up to the end of the current
+" type \ to bring the line below the cursor up to the end of the current
 " line
 nnoremap \ J
 
 " source the vim nerdtree colors file
 let $VIMHOME=expand('<sfile>:p:h')
 source $VIMHOME/.vim/.vimrc_nerdtree_colors
-
-" bind backspace to open previously open buffer
-nnoremap <BS> :new<CR>:bp<CR>
