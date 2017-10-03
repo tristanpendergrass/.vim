@@ -24,6 +24,9 @@ autocmd FileType elm setlocal shiftwidth=4 softtabstop=4 expandtab
 set ignorecase
 set smartcase
 
+" type :R to reload the .vimrc
+command! R source $MYVIMRC
+
 " because no one uses the semicolon but I often use colon
 nnoremap ; :
 nnoremap : ;
