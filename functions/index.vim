@@ -7,7 +7,8 @@ endfunction
 " all-caps version of the replacement string, and so on for capitalized and
 " non-capitalized versions of the string
 function! FindAndReplace(searchFor, replaceWith)
-  exec '%s/' . toupper(a:searchFor)    . '/' . toupper(a:replaceWith)    . '/g'
-  exec '%s/' . Capitalize(a:searchFor) . '/' . Capitalize(a:replaceWith) . '/g'
-  exec '%s/' . a:searchFor             . '/' . a:replaceWith             . '/g'
+  silent! exec '%s/' . toupper(a:searchFor)    . '/' . toupper(a:replaceWith)    . '/g'
+  silent! exec '%s/' . Capitalize(a:searchFor) . '/' . Capitalize(a:replaceWith) . '/g'
+  silent! exec '%s/' . a:searchFor             . '/' . a:replaceWith             . '/g'
+  echomsg 'Replaced ' . a:searchFor . ' with ' . a:replaceWith . ', ' . Capitalize(a:searchFor) . ' with ' . Capitalize(a:replaceWith) . ', and ' . toupper(a:searchFor) . ' with ' . toupper(a:replaceWith)
 endfunction
