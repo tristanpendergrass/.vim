@@ -1,5 +1,15 @@
 execute pathogen#infect()
 
+" source the vim nerdtree colors file
+let $VIMHOME=expand('<sfile>:p:h')
+source $VIMHOME/.vim/.vimrc_nerdtree_colors
+
+" type :R to reload the .vimrc
+command! R source $MYVIMRC
+
+source $VIMHOME/.vim/functions/index.vim
+command! -nargs=* S :call FindAndReplace(<f-args>)
+
 set number
 set nocompatible
 
@@ -23,9 +33,6 @@ autocmd FileType elm setlocal shiftwidth=4 softtabstop=4 expandtab
 " includes a capital letter. The ignore case is a prereq for smartcase
 set ignorecase
 set smartcase
-
-" type :R to reload the .vimrc
-command! R source $MYVIMRC
 
 " because no one uses the semicolon but I often use colon
 nnoremap ; :
@@ -166,6 +173,3 @@ nnoremap <Leader>t Vi{:Tab/:\zs<CR>
 " line
 nnoremap \ J
 
-" source the vim nerdtree colors file
-let $VIMHOME=expand('<sfile>:p:h')
-source $VIMHOME/.vim/.vimrc_nerdtree_colors
