@@ -1,13 +1,16 @@
 execute pathogen#infect()
 
-" source the vim nerdtree colors file
 let $VIMHOME=expand('<sfile>:p:h')
-source $VIMHOME/.vim/.vimrc_nerdtree_colors
+
+source $VIMHOME/.vim/functions/index.vim
+
+" the following source is included later in the file, under the color scheme
+"source $VIMHOME/.vim/.vimrc_nerdtree_colors
 
 " type :R to reload the .vimrc
 command! R source $MYVIMRC
 
-source $VIMHOME/.vim/functions/index.vim
+" see FindAndReplace in functions/index for details
 command! -nargs=* S :call FindAndReplace(<f-args>)
 
 set number
@@ -58,6 +61,7 @@ let g:rustfmt_autosave = 1
 " enable jsx syntax highlighting in .js files as well as .jsx
 let g:jsx_ext_required = 0
 
+
 " change indenting character
 " I like it off for now
 "let g:indentLine_char = '︙'
@@ -85,6 +89,7 @@ syntax enable
 
 filetype plugin indent on
 
+
 " color scheme goes here
 "set t_co=256
 set background=dark
@@ -95,6 +100,10 @@ colorscheme solarized
 "highlight ColorColumn ctermbg=235 guibg=#EAEAC5
 highlight ColorColumn ctermbg=235 guibg=#1A334C
 let &colorcolumn=100
+
+" this import has to go here, after the colorscheme settings, rather than at
+" the top of the file with the other sources
+source $VIMHOME/.vim/.vimrc_nerdtree_colors
 
 " settings for vim-javascript. I was trying to prevent folding but js files
 " still fold...hopefully we can fix that sometime
