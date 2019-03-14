@@ -15,6 +15,8 @@ It is also important to put a symlink in place so that the `.vimrc` is available
 in the home directory (at least I think it's important?)
 
     ln -s ~/.vim/.vimrc ~/.vimrc
+    
+Another thing to do if on OSX might be go to Keyboard settings and crank the slider for Key Repeat to fast and Delay Until Repeat to short. Holding down j and k to scroll will be better.
 
 ## Adding Plugins
 
